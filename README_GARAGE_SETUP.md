@@ -14,8 +14,10 @@ Pastikan kontainer Docker Garage Anda sudah berjalan (misalnya dengan nama konta
 
 Pertama, periksa status kluster Garage untuk mendapatkan **Node ID** dari kontainer yang sedang berjalan.
 
+container_ID: 897aa716f83c
+
 ```bash
-docker exec -it local_garage garage status
+docker exec -it 897aa716f83c garage status
 
 ```
 
@@ -74,6 +76,7 @@ docker exec -it local_garage garage key create laravel-key
 ```
 
 **Simpan Kredensial yang Dihasilkan:**
+Berikut contoh kredensial yang dihasilkan (akan berbeda untuk setiap pembuatan):
 
 * **Key ID:** `GK7a52bb4cb52df77ef89d6efb`
 * **Secret Key:** `b816e65dafc22a933b6701a059bbee7a3f207181cda843a61233f5c51feb39a7`
