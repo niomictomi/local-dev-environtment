@@ -76,6 +76,7 @@ docker exec -it local_garage garage key create laravel-key
 ```
 
 **Simpan Kredensial yang Dihasilkan:**
+
 Berikut contoh kredensial yang dihasilkan (akan berbeda untuk setiap pembuatan):
 
 * **Key ID:** `GK7a52bb4cb52df77ef89d6efb`
@@ -85,10 +86,10 @@ Berikut contoh kredensial yang dihasilkan (akan berbeda untuk setiap pembuatan):
 
 ## 5. Buat Bucket Baru
 
-Buat penyimpanan *bucket* (contoh: `nusabhakti`).
+Buat penyimpanan *bucket* (contoh: `mybucket`).
 
 ```bash
-docker exec -it local_garage garage bucket create nusabhakti
+docker exec -it local_garage garage bucket create mybucket
 
 ```
 
@@ -96,10 +97,10 @@ docker exec -it local_garage garage bucket create nusabhakti
 
 ## 6. Berikan Izin Akses (Allow) Key ke Bucket
 
-Hubungkan *Access Key* yang telah dibuat ke bucket `nusabhakti` dengan hak akses penuh **Read & Write (RW)**.
+Hubungkan *Access Key* yang telah dibuat ke bucket `mybucket` dengan hak akses penuh **Read & Write (RW)**.
 
 ```bash
-docker exec -it local_garage garage bucket allow nusabhakti --read --write --key laravel-key
+docker exec -it local_garage garage bucket allow mybucket --read --write --key laravel-key
 
 ```
 
@@ -115,7 +116,7 @@ FILESYSTEM_DISK=s3
 AWS_ACCESS_KEY_ID=GK7a52bb4cb52df77ef89d6efb
 AWS_SECRET_ACCESS_KEY=b816e65dafc22a933b6701a059bbee7a3f207181cda843a61233f5c51feb39a7
 AWS_DEFAULT_REGION=garage
-AWS_BUCKET=nusabhakti
+AWS_BUCKET=mybucket
 AWS_USE_PATH_STYLE_ENDPOINT=true
 AWS_ENDPOINT=http://127.0.0.1:3900
 
